@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Random Background Color</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+      body {
+        background-color: #f0f0f0;
+      }
+      button {
+        font-size: 20px;
+        padding: 10px;
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <button id="color-button">Change Color</button>
+    <script>
+      var button = document.getElementById("color-button");
+      button.addEventListener("click", function() {
+        var r = Math.floor(Math.random() * 256);
+        var g = Math.floor(Math.random() * 256);
+        var b = Math.floor(Math.random() * 256);
+        var color = "rgb(" + r + "," + g + "," + b + ")";
+        document.body.style.backgroundColor = color;
+      });
+    </script>
+  </body>
+</html>
